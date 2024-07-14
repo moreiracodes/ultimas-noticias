@@ -1,0 +1,138 @@
+<div class="news-list">
+    <h2 id="search-return" class="search-return">Resultado da busca</h2>
+    <h3>VALOR ECONÔMICO</h3>
+    {% if valor_data %}
+        {% for row in valor_data %}
+        <a href="{{ valor_data[row].href }}" target="_blank">
+            <div class="news">
+                <h4>{{ valor_data[row].title }}</h4>
+                <p class="datetime">{{ valor_data[row].datetime }}</p>
+                <p class="call">{{ valor_data[row].headline }}</p>
+            </div>
+        </a>
+        {% endfor %}
+    {% else %}
+        <div><p class="nonews">Não há novas notícias no Valor Econômico</p></div>
+    {% endif%}  
+    
+    <h3>ESTADÃO</h3>
+    {% if estadao_data %}
+        {% for row in estadao_data %}
+        <a href="{{ estadao_data[row].href }}" target="_blank">
+            <div class="news">
+                <h4>{{ estadao_data[row].title }}</h4>
+                <p class="datetime">{{ estadao_data[row].author }} - {{ estadao_data[row].datetime }}</p>
+                <p class="call">{{ estadao_data[row].headline }}</p>
+            </div>
+        </a>
+        {% endfor %} 
+    {% else %}
+        <div><p class="nonews">Não há novas notícias no Estadão</p></div>
+    {% endif%}
+
+    <h3>FOLHA DE SP</h3>
+    {% if folhasp_data %}
+        {% for row in folhasp_data %}
+        <a href="{{ folhasp_data[row].href }}" target="_blank">
+            <div class="news">
+                <h4>{{ folhasp_data[row].title }}</h4>
+                <p class="datetime">{{ folhasp_data[row].datetime }}</p>
+                <p class="call">{{ folhasp_data[row].headline }}</p>
+            </div>
+        </a>
+        {% endfor %} 
+    {% else %}
+        <div><p class="nonews">Não há novas notícias na Folha de SP</p></div>
+    {% endif%} 
+
+    <h3>O GLOBO</h3>
+    {% if o_globo_data %}
+        {% for row in o_globo_data %}
+        <a href="{{ o_globo_data[row].href }}" target="_blank">
+            <div class="news">
+                <h4>{{ o_globo_data[row].title }}</h4>
+                <p class="datetime">{{ o_globo_data[row].datetime }}</p>
+                <p class="call">{{ o_globo_data[row].headline }}</p>
+            </div>
+        </a>
+        {% endfor %}
+    {% else %}
+        <div><p class="nonews">Não há novas notícias no O Globo</p></div>
+    {% endif%} 
+
+    <h3>Valor Investe</h3>
+    {% if valor_investe %}
+        {% for row in valor_investe %}
+        <a href="{{ valor_investe[row].href }}" target="_blank">
+            <div class="news">
+                <h4>{{ valor_investe[row].title }}</h4>
+                <p class="datetime">{{ valor_investe[row].datetime }}</p>
+                <p class="call">{{ valor_investe[row].headline }}</p>
+            </div>
+        </a>
+        {% endfor %}
+    {% else %}
+        <div><p class="nonews">Não há novas notícias no Valor Investe</p></div>
+    {% endif%} 
+
+    <h3>E-Investidor (INDISPONÍVEL)</h3>
+    {% if einvestidor %}
+        {% for row in einvestidor %}
+        <a href="{{ einvestidor[row].href }}" target="_blank">
+            <div class="news">
+                <h4>{{ einvestidor[row].title }}</h4>
+                <p class="datetime">{{ einvestidor[row].datetime }}</p>
+                <p class="call">{{ einvestidor[row].headline }}</p>
+            </div>
+        </a>
+        {% endfor %}
+    {% else %}
+        <div><p class="nonews">Não há novas notícias no E-Investidor</p></div>
+    {% endif%}
+
+    <h3>Pipeline</h3>
+    {% if pipeline %}
+        {% for row in pipeline %}
+        <a href="{{ pipeline[row].href }}" target="_blank">
+            <div class="news">
+                <h4>{{ pipeline[row].title }}</h4>
+                <p class="datetime">{{ pipeline[row].datetime }}</p>
+                <p class="call">{{ pipeline[row].headline }}</p>
+            </div>
+        </a>
+        {% endfor %}
+    {% else %}
+        <div><p class="nonews">Não há novas notícias no Pipeline</p></div>
+    {% endif%}
+
+    <h3>NeoFeed</h3>
+    {% if neofeed %}
+        {% for row in neofeed %}
+        <a href="{{ neofeed[row].href }}" target="_blank">
+            <div class="news">
+                <h4>{{ neofeed[row].title }}</h4>
+                <p class="datetime">{{ neofeed[row].datetime }}</p>
+                <p class="call">{{ neofeed[row].headline }}</p>
+            </div>
+        </a>
+        {% endfor %}
+    {% else %}
+        <div><p class="nonews">Não há novas notícias no NeoFeed</p></div>
+    {% endif%}
+
+    <h3>Brazil Journal</h3>
+    {% if braziljournal %}
+        {% for row in braziljournal %}
+        <a href="{{ braziljournal[row].href }}" target="_blank">
+            <div class="news">
+                <h4>{{ braziljournal[row].title }}</h4>
+                <p class="datetime">{{ braziljournal[row].datetime }}</p>
+                <p class="call">{{ braziljournal[row].headline }}</p>
+            </div>
+        </a>
+        {% endfor %}
+    {% else %}
+        <div><p class="nonews">Não há novas notícias no Brazil Journal</p></div>
+    {% endif%}
+
+</div>

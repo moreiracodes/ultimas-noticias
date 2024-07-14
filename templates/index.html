@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="ptbr">
+    <title>ÚLTIMAS NOTÍCIAS</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css')}}">
+    <!-- searchbar CSS-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/searchbar.css')}}">
+
+    <!--Google Webfonts-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+</head>
+<body>
+    <div class="root">
+    {% include 'inc/header.inc.html' %}
+
+    <!--Footer-->
+    {% include 'inc/footer.inc.html' %}
+    <!--End of Footer-->
+
+    </div>
+</div>
+
+</body>
+</html>

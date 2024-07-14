@@ -1,0 +1,168 @@
+html, body { padding: 0; margin: 0; font-family: system-ui; background-color:#807f7f ;}
+p, h1, h2, h3, h4 {padding: 0; margin: 0;}
+.root{
+    max-width: 1600px;
+    margin: auto;
+    padding: 0 2rem;
+}
+.header{
+    width: 100%;
+    min-height: 60rem;
+    /* padding: 2%; */
+    background: url("../images/banner-images/banner-image-2.jpg") no-repeat right top;
+    background-size:cover;
+    padding-bottom: 20rem;
+}
+
+.logo{
+    width: 96%;
+    padding: 2%;
+    background-color: #c20000;
+    
+}
+
+.logo h1{
+    padding: 2rem 0;
+    display: inline-block;
+    width: 40%;
+}
+
+.logo h1 a{
+    text-decoration: none;
+    color: #000;
+}
+.logo h1 a:hover{
+text-decoration: underline;
+}
+
+.logo ul{
+    width: 50%;
+    display: inline-block;
+    text-align: right;
+}
+
+.logo ul li{
+    display: inline-block;
+    margin-right: 3rem;
+    font-size: 1.5em;
+}
+
+.logo ul li a{
+    background-color:#b49901;
+    text-decoration: none;
+    font-weight: bold;
+    padding:  0.7rem 2rem;
+    color: #000;
+}
+
+.logo ul li a:hover{
+    background-color:#ffd905;
+}
+
+.header .banner{
+    text-align: left;
+    width: 96%;
+    padding: 5% 2%; 
+    
+}
+.header .banner h1{
+    font-size: 4em;
+    line-height: 1em;
+        
+}
+.header .banner h2{
+    font-size: 2em;
+
+    line-height: 1.5em;
+    color: #807f7f; 
+    margin: 3rem 0;
+
+}
+
+.header .banner span{
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, 
+     rgba(255,255,255,0) 0%, 
+     rgba(255,255,255,0) 10%, 
+     rgba(255,255,255,1) 10%,
+     rgba(255,255,255,1) 100%);
+}
+
+.header .banner .tit-portais{
+    color:#000;
+    padding: 0.3em;
+    background-color: white;
+    margin: .3em 0;
+    display: inline-block;
+    font-size: 2em;    
+    
+}
+.header .banner ul.portals-list {
+    margin: 0;
+    padding: 0;
+    
+}
+.header .banner ul.portals-list li{
+    list-style: none;
+}
+.header .banner ul.portals-list li a{
+    text-decoration: none;
+    color: #807f7f;
+    padding: 0.3em;
+    background-color: white;
+    margin: .3em 0;
+    display: inline-block;
+    font-size: 1.5em;
+}
+
+.header .banner ul.portals-list li a:hover{
+    background-color: #c20000;
+    color: #fff;
+}
+.content .news-list{
+    background-color: #fff;
+}
+.search-return {
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem 0 0 0;
+    text-transform: uppercase;
+}
+.content .news-list h3{
+    margin: 0 0 1em 0 ; padding: 1em ;
+    background-color: #c20000;
+}
+
+.content .news-list .news{
+    padding: 1rem 1rem 1rem 3rem;
+    margin-bottom: 1rem;
+    background-color: #e4e4e4;
+}
+.content .news-list .news:hover{
+    background-color: pink;
+}
+.content .news-list a{
+    text-decoration: none;
+    color: #000;
+}
+
+.content .news-list .news p.call {padding: 1em 0;}
+.content .news-list .news p.datetime{
+    color:#807f7f;
+    font-size: 0.8em;
+}
+.content .news-list .nonews{
+    padding: 1rem;
+}
+.footer{
+    text-align: center;
+    padding: 3% 5% 5% 5%;
+    /* height: 5%; */
+}
+
+.search-message p{
+    text-align: center;
+    font-weight: bold;
+    background-color: #ffd905;
+    padding: 0.5rem;
+}
