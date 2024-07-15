@@ -1,4 +1,4 @@
-# Últimas Noticias
+# Últimas Notícias
 
 Com vistas à otimizar a busca por notícias relevantes na imprensa nacional, especialmente sobre o mercado financeiro, nasceu este projeto, que consiste em uma **aplicação Flask e que raspa dados de portais de notícias** e entrega uma lista de resultados de busca com as últimas notícias que contém os termos de busca.
 
