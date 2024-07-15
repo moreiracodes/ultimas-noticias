@@ -54,33 +54,6 @@ class Spider:
             _datetime = self.string_cleaner(
                 row.span.find_next('span').get_text())
 
-            # _datetime = _datetime.split('|')
-
-            # # date
-            # _datetime[0] = self.string_cleaner(_datetime[0])
-            # date = _datetime[0].split(' de ')
-
-            # day = date[0]
-            # mounth_str = str(date[1]).capitalize()
-            # year = date[2]
-
-            # # time
-            # _datetime[1] = self.string_cleaner(_datetime[1])
-            # time = _datetime[1].split('h')
-
-            # hour = time[0]
-            # minute = time[1]
-
-            # datetime_str = f"{day}-{mounth_str}-{year} {hour}:{minute}"
-            # datetime_format = '%d-%B-%Y %H:%M'
-            # datetime_obj = datetime.strptime(datetime_str, datetime_format)
-
-            # # timedelta
-            # previous_days = timedelta(days=self._comeback_days)
-            # now = datetime.now()
-
-            # if (datetime_obj > (now - previous_days)):
-
             news[index] = {
                 'href': row.a['href'],
                 'title': row.a['title'],
@@ -88,8 +61,6 @@ class Spider:
                 'author': row.span.get_text(),
                 'datetime': _datetime,
             }
-            # else:
-            #     break
 
         return news
 
@@ -104,24 +75,6 @@ class Spider:
         news = {}
         for index, row in enumerate(content):
 
-            # # # timedelta
-            # date = row.parent.css.select(
-            #     ".widget--info__meta")[0].get_text().split(' ')
-            # date[1] = int(date[1])
-
-            # isOld = False
-            # match str(date[2]).upper():
-            #     case 'DIA' | 'DIAS':
-            #         if date[1] > self._comeback_days:
-            #             isOld = True
-            #     case 'HORA' | 'HORAS':
-            #         if date[1] > (self._comeback_days * 24):
-            #             isOld = True
-            #     case _:
-            #         pass
-
-            # if (not isOld):
-
             news[index] = {
                 'href': row.parent['href'],
                 'title':  self.string_cleaner(row.get_text()),
@@ -129,9 +82,6 @@ class Spider:
                 'datetime': row.parent.css.select(
                     ".widget--info__meta")[0].get_text(),
             }
-
-            # else:
-            #     break
 
         return news
 
@@ -147,33 +97,6 @@ class Spider:
         news = {}
         for index, row in enumerate(content):
             try:
-                # _datetime = self.string_cleaner(row.time.get_text())
-                # _datetime = _datetime.split(' às ')
-
-                # # date
-                # _datetime[0] = self.string_cleaner(_datetime[0])
-                # date = _datetime[0].split('.')
-
-                # day = date[0]
-                # mounth_str = str(date[1]).capitalize()
-                # year = date[2]
-
-                # # time
-                # _datetime[1] = self.string_cleaner(_datetime[1])
-                # time = _datetime[1].split('h')
-
-                # hour = time[0]
-                # minute = time[1]
-
-                # datetime_str = f"{day}-{mounth_str}-{year} {hour}:{minute}"
-                # datetime_format = '%d-%b-%Y %H:%M'
-                # datetime_obj = datetime.strptime(datetime_str, datetime_format)
-
-                # # timedelta
-                # previous_days = timedelta(days=self._comeback_days)
-                # now = datetime.now()
-
-                # if (datetime_obj > (now - previous_days)):
 
                 news[index] = {
                     'href': row.a['data-href'],
@@ -199,63 +122,6 @@ class Spider:
 
         news = {}
         for index, row in enumerate(content):
-
-            # # date
-            # _datetime = self.string_cleaner(row.parent.css.select(
-            #     ".widget--info__meta")[0].get_text())
-
-            # print('-'*80)
-            # print(_datetime)
-            # print('-'*80)
-            # # sys.exit(0)
-
-            # if 'há ' in _datetime:
-            #     date = _datetime.split(' ')
-            #     date[1] = int(date[1])
-
-            #     isOld = True
-            #     match str(date[2]).upper():
-            #         case 'DIA' | 'DIAS':
-            #             if date[1] > self._comeback_days:
-            #                 isOld = False
-            #         case 'HORA' | 'HORAS':
-            #             if date[1] > (self._comeback_days * 24):
-            #                 isOld = False
-            #         case _:
-            #             pass
-            # else:
-
-            #     _datetime = _datetime.split(' ')
-
-            #     _datetime[0] = self.string_cleaner(_datetime[0])
-            #     date = _datetime[0].split('/')
-
-            #     day = date[0]
-            #     mounth_str = str(date[1])
-            #     year = date[2]
-
-            #     # time
-            #     _datetime[1] = self.string_cleaner(_datetime[1])
-            #     time = _datetime[1].split('h')
-
-            #     hour = time[0]
-            #     minute = time[1]
-
-            #     datetime_str = f"{day}-{mounth_str}-{year} {hour}:{minute}"
-            #     datetime_format = '%d-%m-%Y %H:%M'
-            #     datetime_obj = datetime.strptime(datetime_str, datetime_format)
-
-            #     # timedelta
-            #     previous_days = timedelta(days=self._comeback_days)
-            #     now = datetime.now()
-
-            #     isOld = datetime_obj > (now - previous_days)
-
-            # print('idOld-----'*80)
-            # print(isOld)
-            # print('-'*80)
-
-            # if (isOld):
 
             news[index] = {
                 'href': row.parent['href'],
@@ -298,11 +164,6 @@ class Spider:
         soup = self._getSoup(url)
         content = soup.find_all(
             'h2')
-
-        # print('-'*80)
-        # print(content)
-        # print('-'*80)
-        # sys.exit()
 
         news = {}
         for index, row in enumerate(content):
@@ -396,10 +257,7 @@ class Spider:
                 'headline': '',
                 'datetime': '',
             }
-            # print('-'*80)
-            # print(news)
-            # print('-'*80)
-            # sys.exit()
+
         return news
 
     def string_cleaner(self, text):
